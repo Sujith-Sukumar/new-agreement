@@ -32,6 +32,11 @@ function printt() {
    user.startDate = document.getElementById('date').value
    user.stambPapper = document.getElementById('stamb').value
 
+   //store data
+   localStorage.setItem('user', JSON.stringify(user));
+   console.log('datastore')
+
+
    //client-side Validation
    let nameError=document.getElementById('nameerror')
    let companyError=document.getElementById('companyerror')
@@ -351,3 +356,38 @@ const agreement =`<div style="height:500px; width:100%;  font-family-Cambria; fo
    location.reload();
 
 }
+
+
+function displayStoredData() {
+   // Retrieve the user data from localStorage
+   let storedUser = JSON.parse(localStorage.getItem('user'));
+
+
+   console.log(storedUser);
+   
+   // Check if user data exists
+   if (storedUser) {
+       // Populate the input fields with the retrieved user data
+       document.getElementById('firstname').value = storedUser.firstName;
+       document.getElementById('Companyname').value = storedUser.companyName;
+       document.getElementById('designation').value = storedUser.designation;
+       document.getElementById('address').value = storedUser.address;
+       document.getElementById('Adharnumber').value = storedUser.adharNumber;
+       document.getElementById('number').value = storedUser.number;
+       document.getElementById('pinnumber').value = storedUser.pinnumber;
+       document.getElementById('district').value = storedUser.district;
+       document.getElementById('postoffice').value = storedUser.postoffice;
+       document.getElementById('floornumber').value = storedUser.floorNumber;
+       document.getElementById('roomnumber').value = storedUser.roomNumber;
+       document.getElementById('cabinnumber').value = storedUser.cabinNumber;
+       document.getElementById('date').value = storedUser.startDate;
+       document.getElementById('stamb').value = storedUser.stambPapper;
+   } else {
+       alert('No user data found!');
+   }
+}
+
+// Optional: Automatically display stored data when the page loads
+window.onload = function() {
+   displayStoredData();
+};
