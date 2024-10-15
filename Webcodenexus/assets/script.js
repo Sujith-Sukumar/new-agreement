@@ -354,17 +354,10 @@ const agreement =`<div style="height:500px; width:100%;  font-family-Cambria; fo
    window.print();
    document.body.innerHTML = originalContents;
    location.reload();
-
 }
-
-
 function displayStoredData() {
    // Retrieve the user data from localStorage
    let storedUser = JSON.parse(localStorage.getItem('user'));
-
-
-   console.log(storedUser);
-   
    // Check if user data exists
    if (storedUser) {
        // Populate the input fields with the retrieved user data
@@ -382,12 +375,25 @@ function displayStoredData() {
        document.getElementById('cabinnumber').value = storedUser.cabinNumber;
        document.getElementById('date').value = storedUser.startDate;
        document.getElementById('stamb').value = storedUser.stambPapper;
-   } else {
-       alert('No user data found!');
-   }
+   } 
 }
-
 // Optional: Automatically display stored data when the page loads
 window.onload = function() {
    displayStoredData();
 };
+document.getElementById('print-two').addEventListener('click', clearData)
+function clearData() {
+   document.getElementById('firstname').value = "";
+   document.getElementById('Companyname').value =  "";
+   document.getElementById('designation').value =  "";
+   document.getElementById('address').value =  "";
+   document.getElementById('Adharnumber').value =  "";
+   document.getElementById('number').value =  "";
+   document.getElementById('pinnumber').value =  "";
+   document.getElementById('postoffice').value =  "";
+   document.getElementById('floornumber').value =  "";
+   document.getElementById('roomnumber').value =  "";
+   document.getElementById('cabinnumber').value =  "";
+   document.getElementById('date').value =  "";
+   localStorage.clear();
+}
