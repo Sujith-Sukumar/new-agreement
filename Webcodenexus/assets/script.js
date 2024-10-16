@@ -391,7 +391,6 @@ function clearData() {
    document.getElementById('number').value =  "";
    document.getElementById('pinnumber').value =  "";
    document.getElementById('postoffice').value =  "";
-   document.getElementById('floornumber').value =  "";
    document.getElementById('roomnumber').value =  "";
    document.getElementById('cabinnumber').value =  "";
    document.getElementById('date').value =  "";

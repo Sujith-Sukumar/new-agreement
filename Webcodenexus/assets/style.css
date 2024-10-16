@@ -1,49 +1,59 @@
-.full-layout{
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
     background-color: #80ed99;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+    min-height: 100vh;
+}
+
+.full {
+    background-color: #80ed99;   
+    padding-bottom: 30px;
+    min-height: 100vh;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
-.input{
-    position: absolute;
-    left: 200px;
-    width: 350px;
-    height: 35px;
-    border-radius: 3px;
-    border: none;
+
+.content {
+    background-color: #80ed99;
+    max-width: 1920px;
+    width: 100%;
 }
-.label{
+
+.platinum-logo {
+    height: 120px;
+    width: 112px;
+    background-image: url(./logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4%;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.label {
     font-weight: 700;
     font-size: 18px;
+    padding-bottom: 10px;
 }
-.left-fields{
-    position: absolute;
-    left: 140px;
+
+.input {
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid;
+    
 }
-.name-field{top: 100px;}
-.adress-field{top: 170px;}
-.post-field{top:240px;}
-.district-field{top:310px;}
-.pinnumber-field{top: 380px;}
-.phone-field{top: 450px;}
-.aadhar-field{top: 520px;}
-.right-fields{
-    position: absolute;
-    left: 800px;
+
+textarea.input {
+    height: 125px;
 }
-.company-field{top: 100px;}
-.designation-field{top:170px}
-.floornumber-field{top:240px}
-.roomnumber-field{top:310px}
-.cabinnumber-field{top:380px}
-.stambnumber-field{top: 450px;}
-.startdate-field{top: 520px;}
-.submit{
-    top: 600px;
-    left: 46%;
+
+.error {
+    color: red;
+    font-size: 0.875rem;
 }
-.button-style{
+
+.button-style {
     border: none;
     height: 45px;
     width: 140px;
@@ -52,294 +62,14 @@
     background-color: rgb(44, 179, 44);
     color: white;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons-container {
+    margin-top: 20px; /* Adds space between the form and buttons */
+    text-align: center; /* Center the button container */
 }
 ::placeholder{
     font-size: 17px;
     opacity: 0.6;
-}
-:focus {
-    border: 2px solid rgb(68, 207, 86); 
-    outline: none; 
-}
-.error{
-    position: absolute;
-    left: 520px;
-    top: 5px;
-    font-size: 25px;
-    color: red;
-}
-.platinum-logo{
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    height: 120px;
-    width: 112px;
-    background-image: url(./logo.png);
-    background-size:cover;
-    background-position: center;
-    border-radius: 4%;
-}
-.refresh{
-    position: absolute;
-    top: 900px;
-   margin-left: 700px;
-}
-@media only screen and (max-width:1920px){
-
-    .full-layout{
-        background-color: #80ed99;
-        height: 1080px;
-        width: 100vw;
-        position: relative;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-    }
-
-    .input{
-        width: 410px;
-        height: 50px;
-        left: 270px;
-      } 
-    .left-fields{
-        position: absolute;
-        left: 170px;
-    }
-    .right-fields{
-        position: absolute;
-        left: 1000px;
-    }
-    .error{
-        left: 650px;
-        top: 8px;
-    }
-    .label{
-        font-weight: 1000;
-        font-size: 26px;
-    }
-    .name-field{ top: 150px;}
-    .adress-field{top: 250px;}
-    .post-field{top:350px;}
-    .district-field{top:450px;}
-    .pinnumber-field{top: 550px;}
-    .phone-field{top: 650px;}
-    .aadhar-field{top: 750px;}
-    .company-field{top: 150px;}
-    .designation-field{top:250px}
-    .floornumber-field{top:350px}
-    .roomnumber-field{top:450px}
-    .cabinnumber-field{top:550px}
-    .stambnumber-field{top: 650px;}
-    .startdate-field{top: 750px;}
-
-    ::placeholder{
-        font-size: 22px;
-        opacity: 0.6;
-    }
-    .submit{
-        top: 850px;
-        left: 47%;
-    }
-    .button-style{
-        border: none;
-        height: 60px;
-        width: 170px;
-        font-size: 30px;
-        font-weight: 600;
-    }
-    :focus {
-        border: 3px solid rgb(68, 207, 86); 
-        outline: none;
-    }
-    .platinum-logo{
-        right: 40px;
-        top: 20px;
-        height: 140px;
-        width: 140px;
-        border-radius:4%;
-    }
-}
-@media only screen and (max-width:1700px){
-    .input{
-        width: 350px;
-        left: 270px;
-      }
-    .left-fields{
-        position: absolute;
-        left: 120px;
-    }
-    .right-fields{
-        position: absolute;
-        left: 850px;
-    }
-    .error{
-        left: 580px;
-    }
-    .submit{
-        top: 900px;
-        left: 47%;
-    }
-}
-
-@media only screen and (max-width:1500px){
-    .input{
-        width: 300px;
-        left: 250px;
-      }
-    .left-fields{
-        position: absolute;
-        left: 120px;
-    }
-    .right-fields{
-        position: absolute;
-        left: 750px;
-    }
-    .error{
-        left: 500px;
-    }
-    .submit{
-        top: 900px;
-        left: 47%;
-    }
-      
-} 
-@media  only screen and (max-width:1300px){
-  
-    .input{
-      width: 220px;
-      left: 200px;
-    }
-    .label{
-        font-size: 22px;
-    }
-    .left-fields{
-        position: absolute;
-        left: 100px;
-    }
-    .right-fields{
-        position: absolute;
-        left: 590px;
-    }
-    .submit{
-        top: 900px;
-        left: 45%;
-    }
-    .error{
-        left: 400px;
-    }
-    .platinum-logo{
-        right: 20px;
-        top: 10px;
-        height: 130px;
-        width: 130px;
-        border-radius: 4%;
-    }
-    
-} 
- @media  only screen and (max-width:992px){
-  
-    .input{
-        width: 200px;
-        left: 180px;
-        height: 40px;
-    }
-    .label{
-        font-size: 20px;
-    }
-      .left-fields{
-        position: absolute;
-        left: 90px;
-    }
-    .right-fields{
-        position: absolute;
-        left: 500px;
-    }
-    .error{
-        left: 350px;
-    }
-    .submit{
-        top: 850px;
-        left: 43%;
-    }
-   
-      
-    
-} 
-@media only screen and (max-width:860px){
-    .input{
-        width: 140px;
-        left: 160px;
-    }
-    .label{
-        font-size: 19px;
-    }
-      .left-fields{
-        position: absolute;
-        left: 50px;
-    }
-    .right-fields{
-        position: absolute;
-        left: 380px;
-    }
-    .error{
-        left: 280px;
-    }
-    .submit{
-        top: 900px;
-        left: 43%;
-    }
-      
-}
-@media only screen and (max-width:768px){
-    .input{
-        width: 140px;
-        left: 160px;
-    }
-    .label{
-        font-size: 19px;
-    }
-      .left-fields{
-        position: absolute;
-        left: 50px;
-    }
-    .right-fields{
-        position: absolute;
-        left: 380px;
-    }
-    .error{
-        left: 280px;
-    }
-    .submit{
-        top: 900px;
-        left: 43%;
-    }
-}
-@media only screen and (max-width:600px){
-    .input{
-        width: 270px;
-        left: 160px;
-    }
-    .label{
-        font-size: 16px;
-    }
-    .right-fields{
-        position: absolute;
-        left: 60px;
-    }
-    .left-fields{
-        position: absolute;
-        left: 60px;
-    }
-    .error{
-        left: 400px;
-    }
-    .submit{
-        top: 900px;
-        left: 43%;
-    }
-    .company-field{top: 200px;}
-    .designation-field{top:300px}
-    .floornumber-field{top:400px}
-    .roomnumber-field{top:500px}
-    .cabinnumber-field{top:600px}
-    .stambnumber-field{top: 700px;}
-    .startdate-field{top: 800px;}
 }
