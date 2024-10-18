@@ -1,0 +1,21 @@
+{
+  "name": "webcodenexus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-uglify": "^5.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

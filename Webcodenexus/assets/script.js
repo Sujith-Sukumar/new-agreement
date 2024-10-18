@@ -86,7 +86,7 @@ function printt() {
     }else if(!/^\d{4}[-\s]\d{4}[-\s]\d{4}$/.test(user.adharNumber)){
       adharError.textContent="*";
       submit.preventDefault();
-    }else if(!/^[a-zA-Z0-9\s.,]+$/.test(user.companyName)){
+    }else if(!/^[a-zA-Z0-9\s.,@#$%&*-]+$/.test(user.companyName)){
       companyError.textContent='*';
       Submit.preventDefualt();
     }else if(!/^[a-zA-Z\s.,]+$/.test(user.designation)){
@@ -328,13 +328,11 @@ const signature = `<div style="height:35px; width:100%;  Display:flex;">
 
   
 
-const noc = `<h3 style="margin-left: 60px;  font-size:21px; font-weight:600; margin-top:210px;" >NO OBJECTION CERTIFICATE FOR THE COMPANY REGISTRATION</h3><br>
-         <p style="margin-left: 60px;  font-size:17px; word-spacing: 3px; font-weight:600;"> Sub: - No Objection/Consent for use of address to apply for Company<br> Registration.<br><br>
-         ${user.firstName}, ${user.designation} of ${user.companyName}.<br> Address: No ${user.roomNumber} WS Allotment No WS ${user.cabinNumber} ${user.roomNumber} ${user.floor} Floor Sahara<br>Centre, Perinthalmanna, Angadippuram PO,
-         Kerala-679321.<br><br> Dear Sir/Madam<br><br> We are the owners of the aforementioned premise we have rented<br>aforementioned premise to Platinum workspace LLP Vide Rent Agreement<br>from Date ${user.startDate} to ${dayWithSuffix} ${monthNames[inputDate.getMonth() - 1]} ${inputDate.getFullYear() + 1}.
-         <br><br>We here by declare that we have No Objections Platinum workspace    LLP and<br>its clients using the above premise address to carry out their business,to<br>obtain Company Registration and to receive any correspondence from<br>government Authorities.<br>
-         <br>We further allow Platinum Workspace LLP to issue No objection /consent to<br>its clients for purpose of obtain company Registration on behalf of us<br> <br>Thanking you,<br> Name and Signature<br><br>
-         <br>For Platinum Workspace LLP<br> T.Saidalavi (Designated partner)</p>`
+const noc = `<h3 style="text-align:center;  font-size:21px; font-weight:600; margin-top:210px;" ><u>NO OBJECTION CERTIFICATE FROM PREMISES OWNER</u></h3><br>
+         <p style="margin:15px 60px 200px 60px;  font-size:17px; word-spacing: 3px; text-align:justify;line-height:35px">This is to Certify that We, PLATINUM WORKSPACE LLP represented by <span style="font-weight:600;">T SAIDALAVI</span>, Designated Partner, in the capacity of owner of the premises situated
+         at <span style="font-weight:600;"> WS ${user.cabinNumber}, ${user.roomNumber}, ${user.floor} FLOOR, PLATINUM WORKSPACE, SAHARA CENTRE, OPPOSITE POLLY QUARTERS CALICUT ROAD, 
+         PERINTHALMANNA, ANGADIPPURAM, KERALA, INDIA, 679321</span> shall have no objection if the company with the name & style of  <span style="font-weight:600;text-transform:uppercase">${user.companyName}</span>
+         <div style="font-size:17px; word-spacing: 3px; font-weight:600;text-align:right;margin-right:60px"><b">For Platinum Workspace LLP</b><br> T.Saidalavi (Designated partner)</div>`
 
 const agreement =`<div style="height:500px; width:100%;  font-family-Cambria; font-size:15px; box-sizing:"></div>
          <div style="height:400px; width:100%;  padding:10px 60px 0px 60px; text-align: justify;"><h3 style="text-align:center;  font-size:17px; font-weight:600;" >RENT AGREEMENT</h3>
